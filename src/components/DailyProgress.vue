@@ -1,175 +1,57 @@
 <template>
-  <section
-    class="
-      bg-white/25
-      backdrop-blur-xl
-      border
-      border-white/30
-      shadow-lg
-      shadow-pink-100/40
-      rounded-[28px]
-      px-3
-      py-2
-    "
-  >
-    <!-- Header -->
-
-    <div class="flex items-center justify-between mb-3">
-      <h3
-        class="
-          text-sm
-          font-semibold
-          text-violet-900
-        "
-      >
-        Сегодня
-      </h3>
-
-      <span
-        class="
-          text-[11px]
-          text-slate-400
-        "
-      >
-        16 мая
-      </span>
-    </div>
-
-    <!-- Rewards -->
-
-    <div class="flex justify-between gap-2 mb-3">
-
-      <div
-        class="
-          h-10
-          w-10
-          rounded-2xl
-          bg-white/30
-          border border-white/30
-          flex items-center justify-center
-        "
-      >
-        <div
-          class="
-            h-6
-            w-6
-            rounded-full
-            bg-yellow-300
-          "
-        />
-      </div>
-
-      <div
-        class="
-          h-12
-          w-12
-          rounded-2xl
-          bg-white/30
-          border border-white/30
-          flex items-center justify-center
-        "
-      >
-        <div
-          class="
-            h-6
-            w-6
-            rounded-full
-            bg-pink-300
-          "
-        />
-      </div>
-
-      <div
-        class="
-          h-12
-          w-12
-          rounded-2xl
-          bg-white/30
-          border border-white/30
-          flex items-center justify-center
-        "
-      >
-        <div
-          class="
-            h-6
-            w-6
-            rounded-full
-            bg-purple-300
-          "
-        />
-      </div>
-
-      <div
-        class="
-          h-12
-          w-12
-          rounded-2xl
-          bg-white/30
-          border border-white/30
-          flex items-center justify-center
-        "
-      >
-        <div
-          class="
-            h-6
-            w-6
-            rounded-full
-            bg-green-300
-          "
-        />
-      </div>
-
-      <button
-        class="
-          h-12
-          w-12
-          rounded-2xl
-          border-2
-          border-dashed
-          border-violet-200
-          flex
-          items-center
-          justify-center
-          text-violet-400
-          text-xl
-        "
-      >
-        +
-      </button>
-
-    </div>
-
-    <!-- Progress -->
-
-    <div
+  <div class="flex h-full min-h-0 flex-col gap-2.5">
+    <section
       class="
-        text-xs
-        text-violet-950
-        mb-2
+        h-[58px]
+        bg-white/25
+        backdrop-blur-xl
+        border
+        border-white/30
+        rounded-[14px]
+        px-4
+        py-3
       "
     >
-      Циклов завершено: 2 / 6
-    </div>
+      <h3 class="text-[13px] font-semibold text-violet-900">
+        Сегодня: 2 / 6
+      </h3>
 
-    <div
+      <div class="mt-2 h-1.5 rounded-full bg-white/40 overflow-hidden">
+        <div
+          class="
+            h-full
+            w-[33%]
+            rounded-full
+            bg-gradient-to-r
+            from-purple-400
+            to-violet-300
+          "
+        />
+      </div>
+    </section>
+
+    <section
       class="
-        h-1.5
-        rounded-full
-        bg-white/40
+        bg-white/25
+        backdrop-blur-xl
+        border
+        border-white/30
+        rounded-[14px]
+        px-4
+        py-3
+        flex-1
+        min-h-0
         overflow-hidden
       "
     >
-      <div
-        class="
-          h-full
-          w-[33%]
-          rounded-full
-          bg-gradient-to-r
-          from-purple-400
-          to-violet-300
-        "
-      />
-    </div>
+      <h3 class="mb-2 text-[13px] font-semibold text-violet-900">
+        Мотивация на сегодня:
+      </h3>
 
-  </section>
+      <p class="text-[14px] font-semibold leading-5 text-violet-950">
+        Маленькие шаги —
+        большие результаты 💜
+      </p>
+    </section>
+  </div>
 </template>

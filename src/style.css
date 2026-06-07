@@ -3,8 +3,27 @@
 html,
 body,
 #app {
-  width: 420px;
-  height: 700px;
+  width: 584px;
+  height: 592px;
   margin: 0;
-  overflow: hidden;
+  overflow: hidden !important;
+}
+
+html,
+body {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #ffffff;
+}
+
+#app {
+  padding: 12px;
 }

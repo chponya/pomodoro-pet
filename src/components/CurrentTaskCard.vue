@@ -11,17 +11,17 @@ import { Pencil } from 'lucide-vue-next'
       border-white/30
       shadow-md
       shadow-pink-100/30
-      rounded-[22px]
-      px-3
+      rounded-[14px]
+      px-4
       py-2.5
     "
   >
     <div class="flex items-center justify-between gap-3">
-      <div class="flex items-center gap-2.5 min-w-0">
+      <div class="flex min-w-0 items-center gap-2.5">
         <div
           class="
-            h-3.5
-            w-3.5
+            h-5
+            w-5
             rounded-full
             bg-gradient-to-br
             from-purple-300
@@ -31,18 +31,21 @@ import { Pencil } from 'lucide-vue-next'
         />
 
         <div class="min-w-0">
-          <p class="text-[10px] text-slate-500 leading-none mb-1">
+          <p class="mb-1.5 text-[11px] leading-none text-slate-500">
             Текущая задача
           </p>
 
-          <p class="text-sm font-medium text-violet-950 truncate">
+          <p class="truncate text-[17px] font-semibold leading-none text-violet-950">
             Изучить Vue 3
           </p>
         </div>
       </div>
 
-      <button class="text-slate-400 hover:text-violet-500 transition shrink-0">
-        <Pencil :size="14" />
+      <button
+        class="text-slate-400 transition hover:text-violet-500 shrink-0"
+        aria-label="Редактировать текущую задачу"
+      >
+        <Pencil :size="18" :stroke-width="1.7" />
       </button>
     </div>
   </section>

@@ -1,49 +1,65 @@
 <script setup lang="ts">
-import { PawPrint, Pin } from 'lucide-vue-next'
+import {
+  Bell,
+  Pin,
+  PawPrint
+} from 'lucide-vue-next'
 </script>
 
 <template>
   <header class="flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <div
-        class="
-          h-8
-          w-8
-          rounded-xl
-          bg-white/40
-          backdrop-blur-md
-          flex
-          items-center
-          justify-center
-        "
-      >
-        <PawPrint :size="16" />
-      </div>
-
-      <h1
-        class="
-          text-xl
-          font-semibold
-          text-violet-900
-        "
-      >
-        Focus Nica
-      </h1>
-    </div>
 
     <button
       class="
-        h-8
-        w-8
+        h-9
+        w-9
         rounded-xl
         bg-white/40
         backdrop-blur-md
         flex
         items-center
         justify-center
+        shadow-sm
       "
     >
-      <Pin :size="14" />
+      <PawPrint :size="17" />
     </button>
+
+    <div class="flex items-center gap-2">
+
+      <button
+        class="
+          h-9
+          w-9
+          rounded-xl
+          bg-white/40
+          backdrop-blur-md
+          flex
+          items-center
+          justify-center
+          shadow-sm
+        "
+      >
+        <Bell :size="16" />
+      </button>
+
+      <button
+        class="
+          h-9
+          w-9
+          rounded-xl
+          bg-white/40
+          backdrop-blur-md
+          flex
+          items-center
+          justify-center
+          shadow-sm
+        "
+      >
+        <Pin :size="16" />
+      </button>
+
+    </div>
+
   </header>
 </template>

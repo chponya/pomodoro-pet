@@ -1,34 +1,30 @@
 <script setup lang="ts">
-import {
-  Plus,
-  Pencil,
-  Star
-} from 'lucide-vue-next'
+import { Plus } from 'lucide-vue-next'
 
 const tasks = [
   {
     id: 1,
     title: 'Изучить Vue 3',
-    completed: true,
-    color: 'text-violet-400'
+    color: 'bg-violet-400',
+    ring: 'border-violet-300'
   },
   {
     id: 2,
     title: 'Сделать проект',
-    completed: false,
-    color: 'text-pink-400'
+    color: 'bg-pink-400',
+    ring: 'border-pink-300'
   },
   {
     id: 3,
     title: 'Прочитать статью',
-    completed: false,
-    color: 'text-amber-400'
+    color: 'bg-amber-300',
+    ring: 'border-pink-300'
   },
   {
     id: 4,
     title: 'Тренировка',
-    completed: false,
-    color: 'text-green-400'
+    color: 'bg-emerald-300',
+    ring: 'border-pink-300'
   }
 ]
 </script>
@@ -40,152 +36,79 @@ const tasks = [
       backdrop-blur-xl
       border
       border-white/30
-      shadow-lg
-      shadow-pink-100/40
-      rounded-[28px]
-      px-4
-      py-3
+      rounded-[14px]
+      p-4
+      h-full
+      min-h-0
       flex
       flex-col
-      min-h-[190px]
-      flex
-      flex-col
+      shadow-md
+      shadow-pink-100/20
     "
   >
-    <!-- Header -->
-
-    <div
-      class="
-        flex
-        items-center
-        justify-between
-        mb-3
-      "
-    >
-      <h3
-        class="
-          text-[15px]
-          font-semibold
-          text-violet-900
-        "
-      >
-        План на день
+    <div class="mb-2 flex items-center justify-between">
+      <h3 class="text-[14px] font-semibold text-violet-900">
+        Задачи
       </h3>
 
       <button
         class="
-          flex
-          items-center
-          gap-1
+          h-6
+          w-6
+          grid
+          place-items-center
           text-violet-500
-          text-sm
+          transition
+          hover:text-violet-700
         "
+        aria-label="Добавить задачу"
       >
-        <Plus :size="16" />
-        Добавить задачу
+        <Plus :size="20" :stroke-width="1.7" />
       </button>
     </div>
 
-    <!-- Tasks -->
-
     <div
       class="
+        flex
         flex-1
+        min-h-0
+        flex-col
+        gap-2.5
         overflow-y-auto
+        pr-1.5
+        [&::-webkit-scrollbar]:w-1.5
+        [&::-webkit-scrollbar-track]:bg-transparent
+        [&::-webkit-scrollbar-thumb]:rounded-full
+        [&::-webkit-scrollbar-thumb]:bg-violet-200
       "
     >
       <div
         v-for="task in tasks"
         :key="task.id"
-        class="
-          flex
-          items-center
-          justify-between
-          py-1.5
-          border-b
-          border-white/20
-        "
+        class="flex items-center justify-between gap-3"
       >
-        <!-- Left -->
-
-        <div
-          class="
-            flex
-            items-center
-            gap-3
-          "
-        >
-          <div
-            v-if="task.completed"
-            class="
-              h-6
-              w-6
-              rounded-md
-              bg-violet-400
-              text-white
-              flex
-              items-center
-              justify-center
-              text-xs
-            "
-          >
-            ✓
-          </div>
-
-          <div
-            v-else
-            class="
-              h-6
-              w-6
-              rounded-md
-              border-2
-              border-slate-300
-            "
-          />
-
+        <div class="flex min-w-0 items-center gap-2.5">
           <span
             class="
-              text-sm
-              text-violet-950
+              h-4
+              w-4
+              shrink-0
+              rounded-full
+              border-2
+              bg-white/25
             "
-          >
+            :class="task.ring"
+          />
+
+          <span class="truncate text-[13px] font-semibold text-violet-950">
             {{ task.title }}
           </span>
         </div>
 
-        <!-- Right -->
-
-        <div
-          class="
-            flex
-            items-center
-            gap-4
-          "
-        >
-          <Star
-            :size="20"
-            fill="currentColor"
-            :class="task.color"
-          />
-
-          <button
-            class="
-              text-slate-400
-            "
-          >
-            <Pencil :size="15" />
-          </button>
-        </div>
-      </div>
-
-      <div
-        class="
-          py-2
-          text-xl
-          text-slate-400
-        "
-      >
-        ...
+        <span
+          class="h-3.5 w-3.5 shrink-0 rounded-full shadow-sm"
+          :class="task.color"
+        />
       </div>
     </div>
   </section>

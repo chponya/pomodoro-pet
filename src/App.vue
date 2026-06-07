@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import HeaderBar from './components/HeaderBar.vue'
-import ModeSwitcher from './components/ModeSwitcher.vue'
 import TimerCard from './components/TimerCard.vue'
 import CurrentTaskCard from './components/CurrentTaskCard.vue'
 import TaskList from './components/TaskList.vue'
@@ -11,32 +10,38 @@ import BottomNav from './components/BottomNav.vue'
 <template>
   <main
     class="
-      w-[420px]
-      h-[700px]
+      w-full
+      h-full
       overflow-hidden
+      rounded-[28px]
       bg-gradient-to-br
       from-pink-100
       via-purple-100
       to-pink-50
-      p-4
+      shadow-[0_12px_28px_rgba(255,255,255,0.9)]
+
+      px-4
+      py-3
     "
   >
-    <div class="h-full flex flex-col gap-2">
-
+    <div class="h-full min-h-0 flex flex-col gap-2">
       <HeaderBar />
 
-      <ModeSwitcher />
-
-      <TimerCard class="flex-none" />
+      <TimerCard />
 
       <CurrentTaskCard />
 
-      <TaskList class="flex-1 min-h-0" />
+      <div class="flex flex-1 min-h-0 gap-3">
+        <div class="flex-[1.32] min-h-0">
+          <TaskList />
+        </div>
 
-      <DailyProgress />
+        <div class="flex-1 min-h-0">
+          <DailyProgress />
+        </div>
+      </div>
 
       <BottomNav />
-
     </div>
   </main>
 </template>
