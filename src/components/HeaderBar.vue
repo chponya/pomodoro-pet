@@ -1,13 +1,27 @@
 <script setup lang="ts">
 import {
   Bell,
-  Pin,
-  PawPrint
+  Pin
 } from 'lucide-vue-next'
 </script>
 
 <template>
   <header class="flex items-center justify-between">
+    <button
+      class="
+        h-9
+        w-9
+        rounded-xl
+        bg-white/40
+        backdrop-blur-md
+        flex
+        items-center
+        justify-center
+        shadow-sm
+      "
+    >
+      <Bell :size="16" />
+    </button>
 
     <button
       class="
@@ -22,44 +36,7 @@ import {
         shadow-sm
       "
     >
-      <PawPrint :size="17" />
+      <Pin :size="16" />
     </button>
-
-    <div class="flex items-center gap-2">
-
-      <button
-        class="
-          h-9
-          w-9
-          rounded-xl
-          bg-white/40
-          backdrop-blur-md
-          flex
-          items-center
-          justify-center
-          shadow-sm
-        "
-      >
-        <Bell :size="16" />
-      </button>
-
-      <button
-        class="
-          h-9
-          w-9
-          rounded-xl
-          bg-white/40
-          backdrop-blur-md
-          flex
-          items-center
-          justify-center
-          shadow-sm
-        "
-      >
-        <Pin :size="16" />
-      </button>
-
-    </div>
-
   </header>
 </template>

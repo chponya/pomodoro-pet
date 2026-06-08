@@ -5,6 +5,7 @@ import { Pencil } from 'lucide-vue-next'
 <template>
   <section
     class="
+      h-[58px]
       bg-white/25
       backdrop-blur-xl
       border
@@ -13,10 +14,18 @@ import { Pencil } from 'lucide-vue-next'
       shadow-pink-100/30
       rounded-[14px]
       px-4
-      py-2.5
+      py-2
+      flex
+      flex-col
+      justify-center
+      shrink-0
     "
   >
-    <div class="flex items-center justify-between gap-3">
+    <p class="mb-1 text-[11px] font-semibold leading-none text-violet-700/70">
+      Текущая задача
+    </p>
+
+    <div class="flex w-full items-center justify-between gap-3">
       <div class="flex min-w-0 items-center gap-2.5">
         <div
           class="
@@ -30,22 +39,16 @@ import { Pencil } from 'lucide-vue-next'
           "
         />
 
-        <div class="min-w-0">
-          <p class="mb-1.5 text-[11px] leading-none text-slate-500">
-            Текущая задача
-          </p>
-
-          <p class="truncate text-[17px] font-semibold leading-none text-violet-950">
-            Изучить Vue 3
-          </p>
-        </div>
+        <p class="truncate text-[14px] font-semibold leading-none text-violet-950">
+          Изучить Vue 3
+        </p>
       </div>
 
       <button
-        class="text-slate-400 transition hover:text-violet-500 shrink-0"
+        class="grid h-6 w-6 shrink-0 place-items-center text-violet-500 transition hover:text-violet-700"
         aria-label="Редактировать текущую задачу"
       >
-        <Pencil :size="18" :stroke-width="1.7" />
+        <Pencil :size="17" :stroke-width="1.8" />
       </button>
     </div>
   </section>

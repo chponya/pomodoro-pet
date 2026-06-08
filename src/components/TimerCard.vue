@@ -4,19 +4,19 @@ import { Play } from 'lucide-vue-next'
 
 const progress = 25
 
-const radius = 82
+const radius = 78
 const circumference = 2 * Math.PI * radius
 const offset = circumference - (progress / 100) * circumference
 </script>
 
 <template>
-  <section class="h-[210px] overflow-visible rounded-[26px] bg-white/15 px-4 py-0">
+  <section class="h-[190px] overflow-visible rounded-[24px] bg-white/15 px-4 py-0">
     <div class="flex h-full items-center">
-      <div class="flex h-full flex-1 items-end justify-center">
+      <div class="flex h-full flex-[3] items-end justify-center">
         <img
           :src="mascot"
           alt="Mascot"
-          class="h-[218px] select-none object-contain"
+          class="h-[196px] select-none object-contain"
           style="
             filter:
               drop-shadow(0 0 20px rgba(255,255,255,1))
@@ -26,13 +26,13 @@ const offset = circumference - (progress / 100) * circumference
         />
       </div>
 
-      <div class="flex flex-1 items-center justify-center">
+      <div class="flex flex-[2] items-center justify-center">
         <div class="relative">
           <svg
-            width="238"
-            height="238"
+            width="214"
+            height="214"
             viewBox="0 0 190 190"
-            class="-mt-8 -rotate-90"
+            class="-mt-7 -rotate-90"
           >
             <defs>
               <linearGradient id="timerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -47,7 +47,7 @@ const offset = circumference - (progress / 100) * circumference
               :r="radius"
               fill="none"
               stroke="rgba(255,255,255,.35)"
-              stroke-width="5"
+              stroke-width="4.5"
             />
 
             <circle
@@ -56,7 +56,7 @@ const offset = circumference - (progress / 100) * circumference
               :r="radius"
               fill="none"
               stroke="url(#timerGradient)"
-              stroke-width="5"
+              stroke-width="4.5"
               stroke-linecap="round"
               :stroke-dasharray="circumference"
               :stroke-dashoffset="offset"
@@ -73,19 +73,19 @@ const offset = circumference - (progress / 100) * circumference
               justify-center
             "
           >
-            <span class="-mt-8 mb-2 text-[14px] text-violet-700/70">
+            <span class="-mt-7 mb-2 text-[13px] text-violet-700/70">
               Фокус
             </span>
 
-            <span class="text-[48px] font-light leading-none text-violet-950">
+            <span class="text-[43px] font-light leading-none text-violet-950">
               25:00
             </span>
 
             <button
               class="
                 mt-3
-                h-[52px]
-                w-[52px]
+                h-[47px]
+                w-[47px]
                 rounded-full
                 bg-pink-400
                 flex
@@ -98,7 +98,7 @@ const offset = circumference - (progress / 100) * circumference
               "
               aria-label="Запустить таймер"
             >
-              <Play :size="22" fill="white" color="white" />
+              <Play :size="20" fill="white" color="white" />
             </button>
           </div>
         </div>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Plus } from 'lucide-vue-next'
+import { Pencil, Plus } from 'lucide-vue-next'
 
 const tasks = [
   {
@@ -37,7 +37,9 @@ const tasks = [
       border
       border-white/30
       rounded-[14px]
-      p-4
+      px-4
+      pt-4
+      pb-3
       h-full
       min-h-0
       flex
@@ -105,10 +107,12 @@ const tasks = [
           </span>
         </div>
 
-        <span
-          class="h-3.5 w-3.5 shrink-0 rounded-full shadow-sm"
-          :class="task.color"
-        />
+        <button
+          class="grid h-5 w-5 shrink-0 place-items-center text-violet-400 transition hover:text-violet-600"
+          aria-label="Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ Р·Р°РґР°С‡Сѓ"
+        >
+          <Pencil :size="14" :stroke-width="1.8" />
+        </button>
       </div>
     </div>
   </section>
