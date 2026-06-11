@@ -1,5 +1,22 @@
-# Vue 3 + TypeScript + Vite
+# Focus Nica 
+<img width="614" height="778" alt="image" src="https://github.com/user-attachments/assets/4a0df10e-80b1-4934-80c2-d00794bc9d79" />
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Минималистичное расширение для Chrome для фокусировки и отслеживания продуктивности с Pomodoro-таймером, задачами и простой статистикой.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Возможности (MVP)
+- Pomodoro-таймер
+- Список задач (todo)
+- Привязка таймера к задаче
+- Локальное сохранение данных
+- Мини-таймер поверх браузера
+- Базовая статистика сессий
+
+## В перспективе
+- Кастомные темы и цветовые режимы
+- Система мотивационных сообщений и питомец-талисман
+- Экспорт / импорт продуктивности
+- Расширенная аналитика
+- Социальные фичи (шаринг прогресса)
+
+## Стек
+Vue 3 + TypeScript + Vite + Chrome Extension (MV3)
